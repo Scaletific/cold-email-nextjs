@@ -13,40 +13,35 @@ export default function OpenRate() {
     const config: Chart.ChartConfiguration = {
       type: "line",
       data: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-        ],
+        labels: ["January", "February", "March", "April"],
         datasets: [
           {
-            label: String(new Date().getFullYear()), // Ensure label is a string
-            backgroundColor: "#3182ce",
-            borderColor: "#3182ce",
-            data: [65, 78, 66, 44, 56, 67, 75],
-            fill: false,
+            label: String(new Date().getFullYear()), // Current year
+            backgroundColor: "rgba(49, 130, 206, 0.2)", // Light blue gradient
+            borderColor: "#3182ce", // Blue border
+            pointBackgroundColor: "#3182ce", // Blue points
+            pointBorderColor: "#ffffff", // White point borders
+            pointHoverBackgroundColor: "#ffffff", // Hover effect for points
+            data: [65, 78, 66, 44],
+            fill: true, // Enable filling the area under the line
+            lineTension: 0.3, // Smoothing effect on the line
           },
           {
-            label: String(new Date().getFullYear() - 1), // Ensure label is a string
-            fill: false,
-            backgroundColor: "#edf2f7",
-            borderColor: "#edf2f7",
-            data: [40, 68, 86, 74, 56, 60, 87],
+            label: String(new Date().getFullYear() - 1), // Previous year
+            backgroundColor: "rgba(237, 242, 247, 0.2)", // Light grey gradient
+            borderColor: "#edf2f7", // Grey border
+            pointBackgroundColor: "#edf2f7", // Grey points
+            pointBorderColor: "#ffffff", // White point borders
+            pointHoverBackgroundColor: "#ffffff", // Hover effect for points
+            data: [40, 68, 86, 74],
+            fill: true,
+            lineTension: 0.3,
           },
         ],
       },
       options: {
         maintainAspectRatio: false,
         responsive: true,
-        title: {
-          display: false,
-          text: "Sales Charts",
-          fontColor: "white",
-        },
         legend: {
           labels: {
             fontColor: "white",
@@ -57,6 +52,11 @@ export default function OpenRate() {
         tooltips: {
           mode: "index",
           intersect: false,
+          backgroundColor: "#333",
+          titleFontColor: "#fff",
+          bodyFontColor: "#fff",
+          borderColor: "#fff",
+          borderWidth: 1,
         },
         hover: {
           mode: "nearest",
@@ -68,10 +68,8 @@ export default function OpenRate() {
               ticks: {
                 fontColor: "rgba(255,255,255,.7)",
               },
-              display: true,
               gridLines: {
                 display: false,
-                borderDash: [2],
                 color: "rgba(33, 37, 41, 0.3)",
               },
             },
@@ -80,14 +78,19 @@ export default function OpenRate() {
             {
               ticks: {
                 fontColor: "rgba(255,255,255,.7)",
+                maxTicksLimit: 4, // Limit to 4 ticks
+                beginAtZero: true,
               },
-              display: true,
               gridLines: {
-                borderDash: [3],
                 color: "rgba(255, 255, 255, 0.15)",
+                borderDash: [3],
               },
             },
           ],
+        },
+        animation: {
+          duration: 1500, // Animation duration in ms
+          easing: "easeInOutQuad", // Smooth transition
         },
       },
     };
@@ -108,20 +111,22 @@ export default function OpenRate() {
 
   return (
     <>
-      <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700">
+      <div className="relative flex flex-col min-w-0 break-words w-full sm:w-2/4 mb-6 shadow-lg rounded-lg bg-gradient-to-r from-gray-800 via-gray-900 to-black">
         <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
-              <h6 className="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
+              <h6 className="uppercase text-gray-400 mb-1 text-xs font-semibold">
                 Overview
               </h6>
-              <h2 className="text-white text-xl font-semibold">Sales value</h2>
+              <h2 className="text-white text-xl font-semibold">Open Rates</h2>
             </div>
           </div>
         </div>
         <div className="p-4 flex-auto">
           {/* Chart */}
-          <div className="relative h-350-px">
+          <div className="relative h-64">
+            {" "}
+            {/* Reduced height */}
             <canvas id="line-chart"></canvas>
           </div>
         </div>

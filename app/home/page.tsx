@@ -144,8 +144,10 @@ function DashboardPage() {
         </div>
 
         {/* Statistics Cards */}
-        <OpenRate />
-
+        <div className="flex flex-col md:flex-row -mx-2 gap-4 md:gap-6">
+          <OpenRate />
+          <OpenRate />
+        </div>
         {/* Recent Emails Table */}
         <div className="w-full px-2 h-full relative flex flex-col mb-0 shadow-xl rounded-2xl bg-white">
           <div className="p-6 pb-0 bg-white rounded-t-2xl">
