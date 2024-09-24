@@ -18,22 +18,14 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import * as Icon from "react-feather";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { ThemeContext } from "./Provider";
 import { SidebarMenu } from "./Sidebar";
-import Image from "next/image";
-import Logo from "@/public/menu.png";
 import { User2Icon } from "lucide-react";
 
 export default function NavbarComponent() {
   const router = useRouter();
   const theme = useContext(ThemeContext);
   const { setTheme } = useTheme();
-
-  const onDarkModeToggle = (e: boolean) => {
-    setTheme(e ? "dark" : "light");
-    theme?.setTheme(e ? "dark" : "light");
-  };
 
   const logout = () => {
     localStorage.removeItem("user");

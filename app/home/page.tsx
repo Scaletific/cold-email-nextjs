@@ -52,34 +52,34 @@ const emailData: EmailEntry[] = [
 ];
 
 // Sample data for the charts
-const doughnutChartData = {
-  datasets: [
-    {
-      data: [75, 25], // Example data
-      backgroundColor: ["#4CAF50", "#FF6384"],
-      hoverOffset: 4,
-    },
-  ],
-};
+// const doughnutChartData = {
+//   datasets: [
+//     {
+//       data: [75, 25], // Example data
+//       backgroundColor: ["#4CAF50", "#FF6384"],
+//       hoverOffset: 4,
+//     },
+//   ],
+// };
 
-const pieChartData = {
-  datasets: [
-    {
-      data: [30, 70], // Example data
-      backgroundColor: ["#36A2EB", "#FFCE56"],
-      hoverOffset: 4,
-    },
-  ],
-};
+// const pieChartData = {
+//   datasets: [
+//     {
+//       data: [30, 70], // Example data
+//       backgroundColor: ["#36A2EB", "#FFCE56"],
+//       hoverOffset: 4,
+//     },
+//   ],
+// };
 
 // Chart options to hide the legend
-const chartOptions = {
-  plugins: {
-    legend: {
-      display: false, // Hides the legend
-    },
-  },
-};
+// const chartOptions = {
+//   plugins: {
+//     legend: {
+//       display: false, // Hides the legend
+//     },
+//   },
+// };
 
 function DashboardPage() {
   const theme = useContext(ThemeContext);

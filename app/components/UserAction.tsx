@@ -14,12 +14,12 @@ import { useContext } from "react";
 const UserAction = () => {
   const router = useRouter();
   const theme = useContext(ThemeContext);
-  const { setTheme } = useTheme();
+  // const { setTheme } = useTheme()
 
-  const onDarkModeToggle = (e: boolean) => {
-    setTheme(e ? "dark" : "light");
-    theme?.setTheme(e ? "dark" : "light");
-  };
+  // const onDarkModeToggle = (e: boolean) => {
+  //     setTheme(e ? 'dark' : 'light');
+  //     theme?.setTheme(e ? 'dark' : 'light');
+  // }
 
   const logout = () => {
     localStorage.removeItem("user");
@@ -34,12 +34,11 @@ const UserAction = () => {
       className="hs-collapse sm:block overflow-hidden transition-all duration-300 basis-full grow"
     >
       <div className="flex flex-col gap-5 mt-5 ml-10 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-        <DarkModeSwitch
-          className="mr-2 text-white"
-          checked={theme?.theme === "dark"}
-          onChange={onDarkModeToggle}
-          size={20}
-        />
+        {/* <DarkModeSwitch
+                className='mr-2 text-white'
+                checked={theme?.theme === 'dark'}
+                onChange={onDarkModeToggle}
+                size={20} /> */}
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
