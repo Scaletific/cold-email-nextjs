@@ -42,26 +42,26 @@ export function SidebarMenu() {
       label: "Overview",
       name: "Generate Email",
       icon: <MailIcon size={15} className="mr-2" />,
-      href: "/home",
+      href: "/email",
     },
     {
       label: "Overview",
       name: "History",
       icon: <InboxIcon size={15} className="mr-2" />,
-      href: "/home",
+      href: "/history",
     },
     {
       label: "Profile",
       name: "Profile",
       icon: <User2Icon size={15} className="mr-2" />,
-      href: "/home",
+      href: "/profile",
     },
   ];
 
   const uniqueLabels = Array.from(new Set(menus.map((menu) => menu.label)));
 
   return (
-    <ScrollArea className="h-full lg:w-48 sm:w-full bg-primary dark:bg-background dark:text-white text-sm">
+    <ScrollArea className="h-full overflow-hidden lg:w-48 sm:w-full bg-primary dark:bg-background dark:text-white text-sm">
       <div className="md:px-4 sm:p-0 mt-5">
         {uniqueLabels.map((label, index) => (
           <React.Fragment key={label}>
