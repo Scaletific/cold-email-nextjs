@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const emailPage = () => {
+const ProfilePage = () => {
   // State to track the active form
   const [activeForm, setActiveForm] = useState("about");
 
@@ -11,4 +11,4 @@ const emailPage = () => {
   </>;
 };
 
-export default emailPage;
+export default ProfilePage;
