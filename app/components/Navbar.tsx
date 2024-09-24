@@ -81,7 +81,7 @@ export default function NavbarComponent() {
                   href="#"
                   aria-current="page"
                 >
-                  Jane Doe
+                  John Doe
                 </a>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">

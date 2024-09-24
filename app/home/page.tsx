@@ -7,6 +7,8 @@ import Image from "next/image";
 // import { ThemeContext } from "../components/Provider";
 // import TitlePage from "../components/TitlePage";
 import WelcomeImg from "@/public/team_engineering_white.svg";
+import HomeImg from "@/public/homeimg.png";
+import ProfileIcon from "@/public/profileicon.png";
 // import { Pie, Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
@@ -93,7 +95,7 @@ function DashboardPage() {
             <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col h-full">
               <div className="flex h-full flex-col md:flex-row items-center justify-between">
                 <div className="flex flex-col space-y-4 w-full md:w-1/2">
-                  <h2 className="text-2xl font-bold">Welcome, Jane Doe</h2>
+                  <h2 className="text-2xl font-bold">Welcome, John Doe</h2>
                   <p className="text-gray-600">
                     Unlock the Power of Personalized Outreach with Our Cold
                     Email Generator. Craft Compelling Connections.
@@ -104,7 +106,7 @@ function DashboardPage() {
                 </div>
                 <div className="hidden md:block w-full md:w-1/2 mt-6 md:mt-0 ml-0 md:ml-10">
                   <Image
-                    src={WelcomeImg}
+                    src={HomeImg}
                     alt="welcome image"
                     width={500}
                     height={250}
@@ -136,16 +138,16 @@ function DashboardPage() {
                   <Image
                     className="object-cover"
                     alt="Profile picture"
-                    src={WelcomeImg}
+                    src={ProfileIcon}
                     layout="fill"
                   />
                 </div>
 
                 {/* User Info */}
                 <div className="text-center mt-2">
-                  <h2 className="text-lg md:text-xl font-semibold">Jane Doe</h2>
+                  <h2 className="text-lg md:text-xl font-semibold">John Doe</h2>
                   <p className="text-gray-500 text-sm md:text-base">
-                    jane.doe@gmail.com
+                    John.doe@gmail.com
                   </p>
                 </div>
 
