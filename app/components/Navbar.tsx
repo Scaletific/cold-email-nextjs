@@ -14,18 +14,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import { useContext } from "react";
+// import { useContext } from "react";
 import * as Icon from "react-feather";
-import { ThemeContext } from "./Provider";
+// import { ThemeContext } from "./Provider";
 import { SidebarMenu } from "./Sidebar";
 import { User2Icon } from "lucide-react";
 
 export default function NavbarComponent() {
   const router = useRouter();
-  const theme = useContext(ThemeContext);
-  const { setTheme } = useTheme();
+  // const theme = useContext(ThemeContext);
+  // const { setTheme } = useTheme();
 
   const logout = () => {
     localStorage.removeItem("user");

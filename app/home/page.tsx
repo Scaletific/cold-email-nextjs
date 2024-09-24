@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import { useContext } from "react";
-import { ThemeContext } from "../components/Provider";
+// import { useContext } from "react";
+// import { ThemeContext } from "../components/Provider";
 // import TitlePage from "../components/TitlePage";
 import WelcomeImg from "@/public/team_engineering_white.svg";
 // import { Pie, Doughnut } from "react-chartjs-2";
@@ -82,7 +82,7 @@ const emailData: EmailEntry[] = [
 // };
 
 function DashboardPage() {
-  const theme = useContext(ThemeContext);
+  // const theme = useContext(ThemeContext);
 
   return (
     <>
