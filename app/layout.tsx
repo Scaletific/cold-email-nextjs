@@ -3,7 +3,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-// import Providers from "./components/Provider"
+import Providers from "./components/Provider";
 import "./globals.css";
 import { Suspense } from "react";
 
@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main>
           <Suspense>
-            {/* <Providers>{children}</Providers> */}
+            <Providers>{children}</Providers>
             <Toaster />
           </Suspense>
         </main>

@@ -1,5 +1,5 @@
-import { DarkModeSwitch } from "react-toggle-dark-mode";
-// import { ThemeContext } from "./Provider";
+// import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { ThemeContext } from "./Provider";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,13 +13,13 @@ import { useContext } from "react";
 
 const UserAction = () => {
   const router = useRouter();
-  //   const theme = useContext(ThemeContext);
-  // const { setTheme } = useTheme()
+  const theme = useContext(ThemeContext);
+  const { setTheme } = useTheme();
 
-  // const onDarkModeToggle = (e: boolean) => {
-  //     setTheme(e ? 'dark' : 'light');
-  //     theme?.setTheme(e ? 'dark' : 'light');
-  // }
+  const onDarkModeToggle = (e: boolean) => {
+    setTheme(e ? "dark" : "light");
+    theme?.setTheme(e ? "dark" : "light");
+  };
 
   const logout = () => {
     localStorage.removeItem("user");
