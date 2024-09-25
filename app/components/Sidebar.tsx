@@ -42,19 +42,19 @@ export function SidebarMenu() {
       label: "Overview",
       name: "Generate Email",
       icon: <MailIcon size={15} className="mr-2" />,
-      href: "/email",
+      href: "#",
     },
     {
       label: "Overview",
       name: "History",
       icon: <InboxIcon size={15} className="mr-2" />,
-      href: "/history",
+      href: "#",
     },
     {
       label: "Profile",
       name: "Profile",
       icon: <User2Icon size={15} className="mr-2" />,
-      href: "/profile",
+      href: "#",
     },
   ];
 

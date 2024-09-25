@@ -76,7 +76,7 @@ function DashboardPage() {
                     Email Generator. Craft Compelling Connections.
                   </p>
                   <button
-                    onClick={goToEmail}
+                    // onClick={goToEmail}
                     className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
                   >
                     Generate Cold Email
@@ -132,7 +132,7 @@ function DashboardPage() {
                 {/* Edit Button */}
                 <div className="p-4 border-t mt-4">
                   <button
-                    onClick={goToProfile}
+                    // onClick={goToProfile}
                     className="w-full px-4 md:px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
                   >
                     Edit Profile

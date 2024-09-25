@@ -1,14 +1,21 @@
 "use client";
-import React, { useState } from "react";
 
-const EmailPage = () => {
-  // State to track the active form
-  const [activeForm, setActiveForm] = useState("about");
+import React from "react";
 
-  return;
-  <>
-    <h1>Hello</h1>
-  </>;
-};
+function DashboardPage() {
+  return (
+    <>
+      <div className="px-2 space-y-4 md:space-y-5">
+        <div className="flex flex-col md:flex-row -mx-2 gap-4 md:gap-6">
+          {/* Input Card */}
+          <div className="w-full md:w-1/3 px-2"></div>
 
-export default EmailPage;
+          {/* Output Card */}
+          <div className="w-full md:w-2/3 px-2"></div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default DashboardPage;
