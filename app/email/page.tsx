@@ -1,24 +1,31 @@
 "use client";
 
-import React from "react";
-import TitlePage from "../components/TitlePage";
+import React, { useState } from "react";
+import Stepper from "../components/Stepper";
 
-function DashboardPage() {
+const Home: React.FC = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+
   return (
-    <>
-      <h3>New Email</h3>
-      <p>Generate Emails that convert</p>
-      <div className="px-2 space-y-4 md:space-y-5">
-        <div className="flex flex-col md:flex-row -mx-2 gap-4 md:gap-6">
-          {/* Input Card */}
-          <div className="w-full md:w-1/3 px-2"></div>
-
-          {/* Output Card */}
-          <div className="w-full md:w-2/3 px-2"></div>
-        </div>
+    <div className="p-8">
+      <Stepper currentStep={currentStep} />
+      <div className="mt-4">
+        {/* Add functionality to move between steps */}
+        <button
+          className="px-4 py-2 mr-2 bg-gray-200 rounded"
+          onClick={() => setCurrentStep((prev) => Math.max(prev - 1, 0))}
+        >
+          Previous
+        </button>
+        <button
+          className="px-4 py-2 bg-blue-600 text-white rounded"
+          onClick={() => setCurrentStep((prev) => Math.min(prev + 1, 3))}
+        >
+          Next
+        </button>
       </div>
-    </>
+    </div>
   );
-}
+};
 
-export default DashboardPage;
+export default Home;
