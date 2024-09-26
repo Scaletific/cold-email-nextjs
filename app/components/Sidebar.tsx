@@ -61,7 +61,7 @@ export function SidebarMenu() {
   const uniqueLabels = Array.from(new Set(menus.map((menu) => menu.label)));
 
   return (
-    <ScrollArea className="h-full overflow-hidden lg:w-48 sm:w-full bg-primary dark:bg-background dark:text-white text-sm">
+    <ScrollArea className="h-full overflow-hidden lg:w-48 sm:w-2/5 bg-primary dark:bg-background dark:text-white text-sm">
       <div className="md:px-4 sm:p-0 mt-5">
         {uniqueLabels.map((label, index) => (
           <React.Fragment key={label}>
