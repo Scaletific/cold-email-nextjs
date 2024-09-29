@@ -42,7 +42,7 @@ export function SidebarMenu() {
       label: "Overview",
       name: "Generate Email",
       icon: <MailIcon size={15} className="mr-2" />,
-      href: "#",
+      href: "/email",
     },
     {
       label: "Overview",

@@ -8,8 +8,10 @@ const steps = ["Profile", "Customer", "Industry", "Email"];
 
 const Stepper: React.FC<StepperProps> = ({ currentStep }) => {
   return (
-    <div className="flex items-center space-x-4">
-      <h2 className="font-bold text-xl">Create Cold Email</h2>
+    <div className="flex-col items-center space-x-4">
+      <h2 className="font-bold align-items-center text-xl">
+        Create Cold Email
+      </h2>
       <div className="flex space-x-2">
         {steps.map((step, index) => (
           <React.Fragment key={step}>
