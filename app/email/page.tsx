@@ -6,7 +6,6 @@ import Next from "../components/Questionnaire";
 import Intro from "../components/Welcome";
 import DocumentUploadForm from "../components/Upload"; // Import your Document Upload component
 import TitlePage from "../components/TitlePage"; // Import TitlePage component
-import EmailOutput from "../components/EmailOutput"; // Import the EmailOutput component
 import OpenRate from "../components/OpenRate"; // Import OpenRate component
 
 const Home: React.FC = () => {
@@ -86,15 +85,7 @@ const Home: React.FC = () => {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5, type: "spring" }}
             className="w-full flex justify-center"
-          >
-            <div className="text-center">
-              <TitlePage
-                title="Your Cold Email Results"
-                description="Here is the email we have generated for you."
-              />
-              <EmailOutput />
-            </div>
-          </motion.section>
+          ></motion.section>
         ) : null}
       </AnimatePresence>
     </main>
