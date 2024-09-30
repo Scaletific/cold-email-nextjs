@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { HiUpload } from "react-icons/hi"; // Upload icon
-import { FaLink, FaRegCommentDots } from "react-icons/fa"; // Link and comment icons
+import { FaLink, FaRegCommentDots } from "react-icons/fa"; // Link and comment icon
 
 const DocumentUploadForm: React.FC = () => {
   const [fileName, setFileName] = useState<string | null>(null);
   const [link, setLink] = useState("");
   const [description, setDescription] = useState("");
+
+  // Function to redirect to the output page
+  const goToOutput = () => {
+    window.location.href = "/output";
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -76,9 +81,9 @@ const DocumentUploadForm: React.FC = () => {
         className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all mt-4"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => alert("Form Submitted!")}
+        onClick={goToOutput} // Redirect to output page on button click
       >
-        Generate Email
+        Generate Cold Email
       </motion.button>
     </motion.div>
   );
